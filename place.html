@@ -16,11 +16,6 @@
     <div class="divider"></div>
 
     <main>
-        <picture class="hero-image">
-            <source media="(min-width: 1024px)" srcset="images/brazil-large.jpg">
-            <img src="images/brazil-large.jpg" alt="Brazil landscape">
-        </picture>
-
         <section class="data-section">
             <h2>Data</h2>
             <p><strong>Area:</strong> 8,514,877 sq km</p>
@@ -33,8 +28,15 @@
             <p><strong>Internet TLD:</strong> .br</p>
         </section>
 
+        <div class="hero-container">
+            <picture class="hero-image">
+                <source media="(min-width: 1024px)" srcset="images/brazil-large.jpg">
+                <img src="images/brazil-large.jpg" alt="Brazil landscape">
+            </picture>
+        </div>
+
         <section class="weather-section">
-            <h2>Weather <span class="weather-icon"></span></h2>
+            <h2>Weather <img src="images/weather-icon.svg" alt="Weather icon" class="weather-icon"></h2>
             <p><strong>Temperature:</strong> 28 °C</p>
             <p><strong>Conditions:</strong> Sunny</p>
             <p><strong>Wind:</strong> 12 km/h</p>

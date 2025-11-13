@@ -5,30 +5,63 @@
 
     main {
         flex-direction: row;
+        padding: 2rem;
         gap: 2rem;
-        align-items: flex-start;
         max-width: 1200px;
         margin: 0 auto;
     }
 
-    .hero-image {
+    .hero-container {
+        position: static;
         flex: 1;
+        height: 500px;
+        width: auto;
+        min-height: auto;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         order: 2;
-        max-height: none;
-        min-height: 500px;
     }
 
-    .hero-image img {
+    .hero-image {
+        width: 100%;
         height: 100%;
     }
 
+    .hero-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .data-section,
+    .weather-section {
+        position: static;
+        width: 280px;
+        background-color: white;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        height: fit-content;
+        border-radius: 8px;
+    }
+
     .data-section {
-        flex: 0 0 300px;
         order: 1;
     }
 
     .weather-section {
-        flex: 0 0 300px;
         order: 3;
+    }
+
+    .data-section h2,
+    .weather-section h2 {
+        margin: 0 0 1rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .weather-icon {
+        width: 28px;
+        height: 28px;
     }
 }
