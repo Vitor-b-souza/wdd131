@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brazil - Country Page</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Brazil</h1>
+    </header>
+
+    <div class="divider"></div>
+
+    <main>
+        <picture class="hero-image">
+            <source media="(min-width: 1024px)" srcset="images/brazil-large.jpg">
+            <img src="images/brazil-large.jpg" alt="Brazil landscape">
+        </picture>
+
+        <section class="data-section">
+            <h2>Data</h2>
+            <p><strong>Area:</strong> 8,514,877 sq km</p>
+            <p><strong>Population:</strong> 215,313,498</p>
+            <p><strong>Capital:</strong> Brasília</p>
+            <p><strong>Languages:</strong> Portuguese</p>
+            <p><strong>Currency:</strong> Brazilian Real</p>
+            <p><strong>Time Zone:</strong> UTC-3</p>
+            <p><strong>Calling Code:</strong> +55</p>
+            <p><strong>Internet TLD:</strong> .br</p>
+        </section>
+
+        <section class="weather-section">
+            <h2>Weather <span class="weather-icon"></span></h2>
+            <p><strong>Temperature:</strong> 28 °C</p>
+            <p><strong>Conditions:</strong> Sunny</p>
+            <p><strong>Wind:</strong> 12 km/h</p>
+            <p><strong>Wind Chill:</strong> <span id="wind-chill"></span></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="year"></span> Vitor Souza - Brazil</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+    </footer>
+</body>
+</html>
