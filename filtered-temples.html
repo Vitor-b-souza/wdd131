@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Vitor Souza">
+    <title>Temple Album</title>
+    <meta name="description" content="A responsive picture album showcasing beautiful temple architecture from around the world">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h2 class="title">Temple Album</h2>
+            <button id="menu-button" class="menu-button" aria-label="Toggle navigation menu">☰</button>
+        </div>
+        <nav id="main-nav" class="main-nav">
+            <a href="#home" data-filter="home">Home</a>
+            <a href="#old" data-filter="old">Old</a>
+            <a href="#new" data-filter="new">New</a>
+            <a href="#large" data-filter="large">Large</a>
+            <a href="#small" data-filter="small">Small</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="page-heading">Temple Album</h1>
+        <div id="temple-container" class="temple-container"></div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> 🇧🇷 Vitor Souza 🇧🇷</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+    </footer>
+</body>
+</html>
