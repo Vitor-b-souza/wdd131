@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="F1 Central - Your comprehensive hub for Formula 1 racing information, legendary drivers, and iconic circuits.">
+    <title>F1 Central - Formula 1 Hub</title>
+    <link rel="stylesheet" href="styles/fomula-one.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🏁 F1 Central</div>
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+            <ul class="nav-menu">
+                <li><a href="formula-one.html" class="active">Home</a></li>
+                <li><a href="drivers.html">Drivers</a></li>
+                <li><a href="circuits.html">Circuits</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to F1 Central</h1>
+            <p>Your Premier Hub for Formula 1 Racing Excellence</p>
+            <button class="cta-button" id="learnMoreBtn">Learn More</button>
+        </div>
+    </section>
+
+
+    <main>
+
+        <section class="about">
+            <h2>About Formula 1</h2>
+            <div class="content-grid">
+                <article>
+                    <h3>The Sport of Kings</h3>
+                    <p>Formula 1 is the highest class of single-seater racing sanctioned by the Fédération Internationale de l'Automobile (FIA). Known as the pinnacle of motorsport, F1 combines cutting-edge technology, human skill, and strategic teamwork to create the most exciting racing competition in the world.</p>
+                </article>
+                <article>
+                    <h3>History & Legacy</h3>
+                    <p>Since its inception in 1950, Formula 1 has evolved from a dangerous pastime of wealthy enthusiasts into a global phenomenon watched by hundreds of millions. The sport has produced legendary drivers, revolutionary technologies, and unforgettable moments that define motorsport history.</p>
+                </article>
+                <article>
+                    <h3>Global Competition</h3>
+                    <p>Each season, Formula 1 races across multiple continents, visiting iconic circuits like Monaco, Monza, and Silverstone. The championship attracts the world's top drivers and manufacturers, making it the ultimate test of speed, precision, and competitive spirit.</p>
+                </article>
+            </div>
+        </section>
+
+
+        <section class="featured">
+            <h2>Featured Highlights</h2>
+            <div class="featured-grid">
+                <div class="featured-card">
+                    <h3>🏎️ Legendary Drivers</h3>
+                    <p>Explore profiles of Formula 1's greatest competitors, from Ayrton Senna to Max Verstappen. Discover their statistics, achievements, and impact on the sport.</p>
+                    <a href="drivers.html" class="card-link">View Drivers →</a>
+                </div>
+                <div class="featured-card">
+                    <h3>🏁 Iconic Circuits</h3>
+                    <p>Visit the world's most prestigious racing tracks. Learn about the characteristics, history, and unique challenges of each circuit.</p>
+                    <a href="circuits.html" class="card-link">View Circuits →</a>
+                </div>
+                <div class="featured-card">
+                    <h3>📋 F1 Basics</h3>
+                    <p>New to Formula 1? Understand the fundamental rules, how the championship works, and what makes F1 the ultimate motorsport.</p>
+                    <a href="#basics" class="card-link">Learn Basics →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="basics" id="basics">
+            <h2>Understanding Formula 1</h2>
+            <div class="basics-content">
+                <div class="basic-item">
+                    <h3>Race Format</h3>
+                    <p>F1 races typically last approximately 2 hours. Drivers compete over a set number of laps on various circuits around the world. The driver who crosses the finish line first wins the race and gains valuable championship points.</p>
+                </div>
+                <div class="basic-item">
+                    <h3>Points System</h3>
+                    <p>Drivers earn points based on their finishing position. The top 10 finishers receive points, with first place earning 25 points. These points accumulate throughout the season to determine the Driver's Champion and the Constructor's Champion.</p>
+                </div>
+                <div class="basic-item">
+                    <h3>Teams & Manufacturers</h3>
+                    <p>Each team fields two drivers and operates with a crew of engineers, mechanics, and strategists. The car's design, setup, and technology are crucial to competitive success. Manufacturers compete for the Constructor's Championship.</p>
+                </div>
+                <div class="basic-item">
+                    <h3>Safety & Regulations</h3>
+                    <p>Formula 1 maintains strict technical regulations to ensure fair competition and driver safety. The FIA continuously updates these regulations to promote exciting racing while protecting competitors from harm.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="stats">
+            <h2>Quick Facts</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">73</div>
+                    <p>Grand Prix Wins</p>
+                    <small id="recordHolder">Lewis Hamilton</small>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">200+</div>
+                    <p>Races per Decade</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">10</div>
+                    <p>Constructor Teams</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">23</div>
+                    <p>Races per Season</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="newsletter">
+            <h2>Stay Updated</h2>
+            <p>Join our community to get the latest Formula 1 news and updates</p>
+            <form id="newsletterForm" class="newsletter-form">
+                <input 
+                    type="email" 
+                    id="emailInput" 
+                    placeholder="Enter your email" 
+                    required 
+                    aria-label="Email address"
+                >
+                <button type="submit" class="submit-btn">Subscribe</button>
+            </form>
+            <div id="formMessage"></div>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 F1 Central. All rights reserved.</p>
+            <p><a href="references.html">References & Sources</a></p>
+        </div>
+    </footer>
+
+    <script src="scripts/formua-one.js"></script>
+</body>
+</html>
