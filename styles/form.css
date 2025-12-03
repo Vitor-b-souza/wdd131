@@ -134,13 +134,14 @@ input[type="date"]:focus {
 .checkbox-group div {
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
 .checkbox-group input[type="checkbox"] {
     width: 18px;
     height: 18px;
-    margin-right: 10px;
     cursor: pointer;
+    order: 2;
 }
 
 .checkbox-group label {
@@ -148,6 +149,7 @@ input[type="date"]:focus {
     font-weight: normal;
     margin-bottom: 0;
     cursor: pointer;
+    order: 1;
 }
 
 textarea {
