@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Confirmation</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <style>
+        .confirmation-container {
+            background-color: #d4c5d4;
+            padding: 40px 30px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        .confirmation-container h2 {
+            color: #3d1a4d;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .confirmation-container p {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .counter {
+            font-size: 28px;
+            font-weight: bold;
+            color: #3d1a4d;
+            margin: 20px 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 30px;
+            background-color: #f0f0f0;
+            color: #333;
+            text-decoration: none;
+            border-radius: 4px;
+            border: 1px solid #999;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-link:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <div class="confirmation-container">
+            <h2>Thank You for Your Review!</h2>
+            <p>Your product review has been submitted successfully.</p>
+            <div class="counter">
+                <p>Total Reviews Submitted:</p>
+                <p id="review-count">0</p>
+            </div>
+            <a href="form.html" class="back-link">Submit Another Review</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;2025 Vitor Souza<br>Last Modification: <span id="last-mod"></span></p>
+    </footer>
+
+    <script>
+        function updateReviewCounter() {
+            let reviewCount = localStorage.getItem('reviewCount');
+            reviewCount = reviewCount ? parseInt(reviewCount) + 1 : 1;
+            localStorage.setItem('reviewCount', reviewCount);
+            document.getElementById('review-count').textContent = reviewCount;
+        }
+
+        function updateLastModification() {
+            const lastModSpan = document.getElementById('last-mod');
+            const lastModDate = new Date(document.lastModified);
+            const formattedDate = lastModDate.toLocaleString('en-US', {
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+            lastModSpan.textContent = formattedDate;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            updateReviewCounter();
+            updateLastModification();
+        });
+    </script>
+</body>
+</html>
