@@ -131,18 +131,22 @@ input[type="date"]:focus {
     gap: 12px;
 }
 
-.checkbox-label {
+.checkbox-group div {
     display: flex;
     align-items: center;
-    cursor: pointer;
-    font-weight: normal;
-    margin-bottom: 0;
 }
 
-.checkbox-label input[type="checkbox"] {
+.checkbox-group input[type="checkbox"] {
     width: 18px;
     height: 18px;
     margin-right: 10px;
+    cursor: pointer;
+}
+
+.checkbox-group label {
+    display: inline;
+    font-weight: normal;
+    margin-bottom: 0;
     cursor: pointer;
 }
 
