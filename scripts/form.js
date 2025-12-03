@@ -8,13 +8,10 @@ const products = [
 
 function populateProductSelect() {
     const selectElement = document.getElementById('product-select');
-    const firstOption = selectElement.querySelector('option');
-    firstOption.disabled = true;
-    firstOption.selected = true;
     
     products.forEach(product => {
         const option = document.createElement('option');
-        option.value = product.name;
+        option.value = product.id;
         option.textContent = product.name;
         selectElement.appendChild(option);
     });
