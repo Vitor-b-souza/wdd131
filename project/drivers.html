@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formula 1 2025 Drivers - Current Grid and Team Lineups">
+    <title>Formula 1 - Current Drivers 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .driver-filter {
+            margin-bottom: 40px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background-color: var(--color-gray);
+            color: var(--color-light);
+            border: 2px solid var(--color-gray);
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background-color: var(--color-primary);
+            border-color: var(--color-primary);
+            color: var(--color-dark);
+        }
+
+        .drivers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .driver-profile {
+            background-color: var(--color-gray);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .driver-profile:hover {
+            border-color: var(--color-primary);
+            transform: translateY(-5px);
+        }
+
+        .driver-image-container {
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+            background-color: var(--color-dark);
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .driver-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            display: block;
+        }
+
+        .driver-body {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .driver-name {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: 5px;
+        }
+
+        .driver-number {
+            font-size: 12px;
+            color: var(--color-text);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .driver-info {
+            margin-bottom: 10px;
+            flex-grow: 1;
+        }
+
+        .driver-info-label {
+            font-weight: 600;
+            color: var(--color-text);
+            font-size: 10px;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+
+        .driver-info-value {
+            color: var(--color-light);
+            font-size: 13px;
+        }
+
+        .favorite-btn {
+            width: 100%;
+            background-color: var(--color-dark);
+            border: 2px solid var(--color-primary);
+            color: var(--color-primary);
+            padding: 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 12px;
+            margin-top: auto;
+        }
+
+        .favorite-btn:hover {
+            background-color: var(--color-primary);
+            color: var(--color-dark);
+        }
+
+        .favorite-btn.added {
+            background-color: var(--color-primary);
+            color: var(--color-dark);
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">F1</div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="drivers.html">Drivers</a></li>
+                    <li><a href="hall-of-fame.html">Hall of Fame</a></li>
+                    <li><a href="circuits.html">Circuits</a></li>
+                    <li><a href="regulations.html">Regulations</a></li>
+                    <li><a href="beginner.html">Beginner Guide</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>2025 Formula 1 Grid</h1>
+                <p>Meet the 20 drivers competing for the World Championship</p>
+            </div>
+        </section>
+
+        <section class="drivers-section">
+            <div class="container">
+                <h2>Current Drivers</h2>
+                <div class="driver-filter" id="filterContainer">
+                    <button class="filter-btn active" data-filter="all">All Teams</button>
+                </div>
+                <div class="drivers-grid" id="driversGrid"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About F1</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="drivers.html">Drivers</a></li>
+                        <li><a href="circuits.html">Circuits</a></li>
+                        <li><a href="regulations.html">Regulations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="references.html">References</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Formula 1 Championship. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const drivers = [
+                { id: 1, name: 'Max Verstappen', team: 'Red Bull Racing', number: 1, nationality: 'Dutch', championships: 4, image: 'https://media.formula1.com/image/upload/f_auto,c_thumb,q_auto/v1740000000/common/f1/2025/redbullracing/maxver01/2025redbullracingmaxver01right.webp' },
+                { id: 2, name: 'Lando Norris', team: 'McLaren Mercedes', number: 4, nationality: 'British', championships: 1, image: 'https://media.formula1.com/image/upload/f_auto,c_thumb,q_auto/v1740000000/common/f1/2025/mclaren/lannor01/2025mclarenlannor01right.webp' },
+                { id: 3, name: 'Charles Leclerc', team: 'Ferrari', number: 16, nationality: 'Monegasque', championships: 0, image: 'https://media.formula1.com/image/upload/f_auto,c_thumb,q_auto/v1740000000/common/f1/2025/ferrari/chalec01/2025ferrarichalec01right.webp' },
+                { id: 4, name: 'Lewis Hamilton', team: 'Ferrari', number: 44, nationality: 'British', championships: 7, image: 'https://media.formula1.com/image/upload/f_auto,c_thumb,q_auto/v1740000000/common/f1/2025/ferrari/lewham01/2025ferrarilewham01right.webp' },
+                { id: 5, name: 'Oscar Piastri', team: 'McLaren Mercedes', number: 81, nationality: 'Australian', championships: 0, image: 'https://media.formula1.com/image/upload/f_auto,c_thumb,q_auto/v1740000000/common/f1/2025/mclaren/oscpia01/2025mclarenoscpia01right.webp' },
+                { id: 6, name: 'George Russell', team: 'Mercedes', number: 63, nationality: 'British', championships: 0, image: 'https://media.formula1.com/image/upload/f_auto,c_thumb,q_auto/v1740000000/common/f1/2025/mercedes/georus01/2025mercedesgeorus01right.webp' },
+                { id: 7, name: 'Yuki Tsunoda', team: 'Red Bull Racing', number: 22, nationality: 'Japanese', championships: 0, image: 'https://media.formula1.com/image/upload/f_auto,c_thumb,q_auto/v1740000000/common/f1/2025/redbullracing/yuktsu01/2025redbullracingyuktsu01right.webp' },
+                { id: 8, name: 'Kimi Antonelli', team: 'Mercedes', number: 12, nationality: 'Italian', championships: 0, image: 'https://media.formula1.com/image/upload/f_auto,c_thumb,q_auto/v1740000000/common/f1/2025/mercedes/andant01/2025mercedesandant01right.webp' },
+                { id: 9, name: 'Carlos Sainz', team: 'Williams Racing', number: 55, nationality: 'Spanish', championships: 0, image: 'https://media.formula1.com/image/upload/f_auto,c_thumb,q_auto/v1740000000/common/f1/2025/williams/carsai01/2025williamscarsai01right.webp' },
+                { id: 10, name: 'Fernando Alonso', team: 'Aston Martin', number: 14, nationality: 'Spanish', championships: 2, image: 'https://media.formula1.com/image/upload/f_auto,c_thumb,q_auto/v1740000000/common/f1/2025/astonmartin/feralo01/2025astonmartinferalo01right.webp' },
+                { id: 11, name: 'Lance Stroll', team: 'Aston Martin', number: 18, nationality: 'Canadian', championships: 0, image: 'https://media.formula1.com/image/upload/f_auto,c_thumb,q_auto/v1740000000/common/f1/2025/astonmartin/lanstr01/2025astonmartinlanstr01right.webp' },
+                { id: 12, name: 'Alex Albon', team: 'Williams Racing', number: 23, nationality: 'Thai-British', championships: 0, image: 'https://media.formula1.com/image/upload/f_auto,c_thumb,q_auto/v1740000000/common/f1/2025/williams/alealb01/2025williamsalealb01right.webp' },
+                { id: 13, name: 'Pierre Gasly', team: 'Alpine F1 Team', number: 10, nationality: 'French', championships: 0, image: 'https://media.formula1.com/image/upload/f_auto,c_thumb,q_auto/v1740000000/common/f1/2025/alpine/piegas01/2025alpinepiegas01right.webp' },
+                { id: 14, name: 'Franco Colapinto', team: 'Alpine F1 Team', number: 43, nationality: 'Argentine', championships: 0, image: 'https://media.formula1.com/image/upload/f_auto,c_thumb,q_auto/v1740000000/common/f1/2025/alpine/fracol01/2025alpinefracol01right.webp' },
+                { id: 15, name: 'Nico Hulkenberg', team: 'Kick Sauber', number: 27, nationality: 'German', championships: 0, image: 'https://media.formula1.com/image/upload/f_auto,c_thumb,q_auto/v1740000000/common/f1/2025/kicksauber/nichul01/2025kicksaubernichul01right.webp' },
+                { id: 16, name: 'Gabriel Bortoleto', team: 'Kick Sauber', number: 5, nationality: 'Brazilian', championships: 0, image: 'https://media.formula1.com/image/upload/f_auto,c_thumb,q_auto/v1740000000/common/f1/2025/kicksauber/gabbor01/2025kicksaubergabbor01right.webp' },
+                { id: 17, name: 'Esteban Ocon', team: 'Haas F1 Team', number: 31, nationality: 'French', championships: 0, image: 'https://media.formula1.com/image/upload/f_auto,c_thumb,q_auto/v1740000000/common/f1/2025/haasf1team/estoco01/2025haasf1teamestoco01right.webp' },
+                { id: 18, name: 'Oliver Bearman', team: 'Haas F1 Team', number: 87, nationality: 'British', championships: 0, image: 'https://media.formula1.com/image/upload/f_auto,c_thumb,q_auto/v1740000000/common/f1/2025/haasf1team/olibea01/2025haasf1teamolibea01right.webp' },
+                { id: 19, name: 'Isack Hadjar', team: 'Racing Bulls', number: 6, nationality: 'French', championships: 0, image: 'https://media.formula1.com/image/upload/f_auto,c_thumb,q_auto/v1740000000/common/f1/2025/racingbulls/isahad01/2025racingbullsisahad01right.webp' },
+                { id: 20, name: 'Liam Lawson', team: 'Racing Bulls', number: 30, nationality: 'New Zealander', championships: 0, image: 'https://media.formula1.com/image/upload/f_auto,c_thumb,q_auto/v1740000000/common/f1/2025/racingbulls/lialaw01/2025racingbullslialaw01right.webp' }
+            ];
+
+            const driversGrid = document.getElementById('driversGrid');
+            const filterContainer = document.getElementById('filterContainer');
+            const teams = [...new Set(drivers.map(d => d.team))];
+
+            teams.forEach(team => {
+                const btn = document.createElement('button');
+                btn.className = 'filter-btn';
+                btn.textContent = team;
+                btn.dataset.filter = team;
+                btn.addEventListener('click', () => filterDrivers(team));
+                filterContainer.appendChild(btn);
+            });
+
+            function renderDrivers(driversToShow) {
+                driversGrid.innerHTML = '';
+                driversToShow.forEach(driver => {
+                    const card = document.createElement('div');
+                    card.className = 'driver-profile';
+                    card.innerHTML = `
+                        <div class="driver-image-container">
+                            <img src="${driver.image}" alt="${driver.name}" class="driver-image" loading="lazy">
+                        </div>
+                        <div class="driver-body">
+                            <div class="driver-name">${driver.name}</div>
+                            <div class="driver-number">#${driver.number}</div>
+                            <div class="driver-info">
+                                <div class="driver-info-label">Team</div>
+                                <div class="driver-info-value">${driver.team}</div>
+                            </div>
+                            <div class="driver-info">
+                                <div class="driver-info-label">Nationality</div>
+                                <div class="driver-info-value">${driver.nationality}</div>
+                            </div>
+                            <div class="driver-info">
+                                <div class="driver-info-label">Championships</div>
+                                <div class="driver-info-value">${driver.championships}</div>
+                            </div>
+                            <button class="favorite-btn" data-driver="${driver.name}">Add to Favorites</button>
+                        </div>
+                    `;
+                    driversGrid.appendChild(card);
+
+                    const btn = card.querySelector('.favorite-btn');
+                    const favorites = getFavoriteDrivers();
+                    if (favorites.includes(driver.name)) {
+                        btn.classList.add('added');
+                        btn.textContent = 'Added to Favorites';
+                    }
+
+                    btn.addEventListener('click', () => {
+                        if (favorites.includes(driver.name)) {
+                            removeFavoriteDriver(driver.name);
+                            btn.classList.remove('added');
+                            btn.textContent = 'Add to Favorites';
+                        } else {
+                            addFavoriteDriver(driver.name);
+                            btn.classList.add('added');
+                            btn.textContent = 'Added to Favorites';
+                        }
+                    });
+                });
+            }
+
+            function filterDrivers(team) {
+                const buttons = document.querySelectorAll('.filter-btn');
+                buttons.forEach(btn => btn.classList.remove('active'));
+                event.target.classList.add('active');
+
+                if (team === 'all') {
+                    renderDrivers(drivers);
+                } else {
+                    const filtered = drivers.filter(d => d.team === team);
+                    renderDrivers(filtered);
+                }
+            }
+
+            document.querySelector('[data-filter="all"]').addEventListener('click', () => renderDrivers(drivers));
+            renderDrivers(drivers);
+        });
+    </script>
+</body>
+</html>

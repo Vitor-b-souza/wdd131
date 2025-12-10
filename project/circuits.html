@@ -1,0 +1,318 @@
+.circuit-image-container {
+            width: 100%;
+            height: 250px;
+            background-color: var(--color-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .circuit-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formula 1 Circuits 2025 - All 24 Racing Venues and Iconic Tracks">
+    <title>Formula 1 - Circuits 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .circuit-tabs {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            border-bottom: 2px solid var(--color-gray);
+            padding-bottom: 20px;
+        }
+
+        .circuit-tab {
+            background: none;
+            border: none;
+            color: var(--color-text);
+            font-weight: 600;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 16px;
+        }
+
+        .circuit-tab:hover,
+        .circuit-tab.active {
+            color: var(--color-primary);
+            border-bottom: 3px solid var(--color-primary);
+        }
+
+        .circuits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .circuit-card {
+            background-color: var(--color-gray);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .circuit-card:hover {
+            border-color: var(--color-primary);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px rgba(255, 24, 1, 0.25);
+        }
+
+        .circuit-header {
+            background: linear-gradient(135deg, var(--color-primary) 0%, rgba(255, 24, 1, 0.7) 100%);
+            padding: 25px;
+        }
+
+        .circuit-name {
+            font-family: 'Poppins', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--color-light);
+            margin-bottom: 8px;
+        }
+
+        .circuit-location {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .circuit-body {
+            padding: 25px;
+        }
+
+        .circuit-info-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--color-dark);
+        }
+
+        .circuit-info-row:last-child {
+            border-bottom: none;
+        }
+
+        .info-label {
+            color: var(--color-text);
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+
+        .info-value {
+            color: var(--color-primary);
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .circuit-description {
+            margin-top: 20px;
+            color: var(--color-text);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .iconic-badge {
+            display: inline-block;
+            background-color: var(--color-primary);
+            color: var(--color-dark);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            margin-top: 15px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">F1</div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="drivers.html">Drivers</a></li>
+                    <li><a href="hall-of-fame.html">Hall of Fame</a></li>
+                    <li><a href="circuits.html">Circuits</a></li>
+                    <li><a href="regulations.html">Regulations</a></li>
+                    <li><a href="beginner.html">Beginner Guide</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Formula 1 Circuits 2025</h1>
+                <p>24 venues across 5 continents</p>
+            </div>
+        </section>
+
+        <section class="circuits-section">
+            <div class="container">
+                <h2>Racing Venues</h2>
+                <div class="circuit-tabs">
+                    <button class="circuit-tab active" data-filter="current">2025 Calendar</button>
+                    <button class="circuit-tab" data-filter="iconic">Iconic Tracks</button>
+                </div>
+                <div class="circuits-grid" id="circuitsGrid"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About F1</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="drivers.html">Drivers</a></li>
+                        <li><a href="circuits.html">Circuits</a></li>
+                        <li><a href="regulations.html">Regulations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="references.html">References</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Formula 1 Championship. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const circuits = [
+                { name: 'Albert Park', country: 'Australia', round: 1, length: '5.303km', iconic: false },
+                { name: 'Shanghai International Circuit', country: 'China', round: 2, length: '5.451km', iconic: false },
+                { name: 'Suzuka Circuit', country: 'Japan', round: 3, length: '5.807km', iconic: true },
+                { name: 'Bahrain International Circuit', country: 'Bahrain', round: 4, length: '5.412km', iconic: false },
+                { name: 'Jeddah Corniche Circuit', country: 'Saudi Arabia', round: 5, length: '6.174km', iconic: false },
+                { name: 'Miami Grand Prix', country: 'United States', round: 6, length: '5.410km', iconic: false },
+                { name: 'Circuit de Monaco', country: 'Monaco', round: 7, length: '3.337km', iconic: true },
+                { name: 'Circuit de Barcelona-Catalunya', country: 'Spain', round: 8, length: '4.655km', iconic: false },
+                { name: 'Circuit Gilles Villeneuve', country: 'Canada', round: 9, length: '4.361km', iconic: false },
+                { name: 'Red Bull Ring', country: 'Austria', round: 10, length: '4.318km', iconic: false },
+                { name: 'Silverstone Circuit', country: 'United Kingdom', round: 11, length: '5.891km', iconic: true },
+                { name: 'Circuit de Spa-Francorchamps', country: 'Belgium', round: 12, length: '7.004km', iconic: true },
+                { name: 'Hungaroring', country: 'Hungary', round: 13, length: '4.381km', iconic: false },
+                { name: 'Circuit Zandvoort', country: 'Netherlands', round: 14, length: '4.259km', iconic: false },
+                { name: 'Autodromo Nazionale Monza', country: 'Italy', round: 15, length: '5.793km', iconic: true },
+                { name: 'Baku City Circuit', country: 'Azerbaijan', round: 16, length: '6.003km', iconic: false },
+                { name: 'Marina Bay Street Circuit', country: 'Singapore', round: 17, length: '5.065km', iconic: false },
+                { name: 'Circuit of the Americas', country: 'United States', round: 18, length: '5.515km', iconic: false },
+                { name: 'Autodromo Hermanos Rodriguez', country: 'Mexico', round: 19, length: '4.304km', iconic: false },
+                { name: 'Autodromo Jose Carlos Pace Interlagos', country: 'Brazil', round: 20, length: '4.309km', iconic: true },
+                { name: 'Las Vegas Street Circuit', country: 'United States', round: 21, length: '6.120km', iconic: false },
+                { name: 'Lusail International Circuit', country: 'Qatar', round: 22, length: '5.419km', iconic: false },
+                { name: 'Yas Marina Circuit', country: 'United Arab Emirates', round: 23, length: '5.281km', iconic: false }
+            ];
+
+            const descriptions = {
+                'Albert Park': 'Melbourne\'s iconic street circuit returns to kick off the season, known for its fast corners and challenging overtaking opportunities.',
+                'Shanghai International Circuit': 'Shaped like the Chinese character for "above", this circuit is famous for its high-speed corners and challenging layout.',
+                'Suzuka Circuit': 'Japan\'s legendary figure-eight circuit is one of the most challenging and beloved tracks on the calendar, known for its technical corners.',
+                'Bahrain International Circuit': 'Bahrain\'s state-of-the-art facility provides excellent racing with multiple DRS zones and opportunities for overtaking.',
+                'Jeddah Corniche Circuit': 'The world\'s fastest street circuit features extremely high speeds and narrow walls, presenting a unique challenge.',
+                'Miami Grand Prix': 'Miami\'s vibrant street circuit showcases the glamour of Formula 1 racing in the United States.',
+                'Circuit de Monaco': 'The most prestigious street circuit, Monaco demands precision and is where only the best drivers truly shine. Winning here remains every driver\'s dream.',
+                'Circuit de Barcelona-Catalunya': 'A perfect test for car development, this circuit in Montmelo is used extensively for pre-season testing.',
+                'Circuit Gilles Villeneuve': 'Montreal\'s island circuit honors its namesake with challenging walls and exciting racing on a historical venue.',
+                'Red Bull Ring': 'Located in Spielberg, Austria, this modern circuit is known for aggressive racing and slipstreaming battles.',
+                'Silverstone Circuit': 'The British Grand Prix venue and home of Mercedes F1, Silverstone celebrates 80 years of racing heritage in 2025.',
+                'Circuit de Spa-Francorchamps': 'The longest circuit on the F1 calendar winds through the Belgian Ardennes forest with elevation changes and weather challenges.',
+                'Hungaroring': 'Known as the "Monaco of Eastern Europe", this tight circuit demands precision and offers little overtaking.',
+                'Circuit Zandvoort': 'The Dutch circuit features high-speed banked corners and passionate orange-supporting fans.',
+                'Autodromo Nazionale Monza': 'The Temple of Speed features long straights and chicanes designed for high-speed racing and dramatic overtakes.',
+                'Baku City Circuit': 'The City of Winds presents an extremely high-speed street circuit challenge with frequent wind impacts.',
+                'Marina Bay Street Circuit': 'Singapore\'s iconic night race takes place on a picturesque street circuit lit by impressive floodlighting.',
+                'Circuit of the Americas': 'Austin\'s venue combines high-speed sections with technical corners, making it a complete driver challenge.',
+                'Autodromo Hermanos Rodriguez': 'Mexico City\'s highest altitude circuit at 2,200 meters presents unique challenges for teams and their equipment.',
+                'Autodromo Jose Carlos Pace Interlagos': 'Brazil\'s emotional venue is known for dramatic weather changes and passionate fans supporting their champions.',
+                'Las Vegas Street Circuit': 'The glitzy nighttime street race takes place around iconic Vegas locations, providing spectacular entertainment.',
+                'Lusail International Circuit': 'Qatar\'s modern facility hosts the season\'s final F1 Sprint race with excellent racing characteristics.',
+                'Yas Marina Circuit': 'The season finale venue in Abu Dhabi features a beautiful night circuit with good overtaking opportunities.'
+            };
+
+            function renderCircuits(filter) {
+                const circuitsGrid = document.getElementById('circuitsGrid');
+                circuitsGrid.innerHTML = '';
+
+                const filtered = filter === 'iconic' ? circuits.filter(c => c.iconic) : circuits;
+
+                teamsToShow.forEach(circuit => {
+                    const card = document.createElement('div');
+                    card.className = 'circuit-card';
+                    card.innerHTML = `
+                        <div class="circuit-image-container">
+                            <img src="https://media.formula1.com/image/upload/f_auto,c_thumb,q_auto/v1740000000/fom-website/static-assets/2025/races/card/${circuit.name.toLowerCase().replace(/\s+/g, '-')}.webp" alt="${circuit.name}" class="circuit-image" loading="lazy">
+                        </div>
+                        <div class="circuit-header">
+                            <div class="circuit-name">${circuit.name}</div>
+                            <div class="circuit-location">${circuit.country}</div>
+                        </div>
+                        <div class="circuit-body">
+                            <div class="circuit-info-row">
+                                <span class="info-label">Round</span>
+                                <span class="info-value">${circuit.round}</span>
+                            </div>
+                            <div class="circuit-info-row">
+                                <span class="info-label">Track Length</span>
+                                <span class="info-value">${circuit.length}</span>
+                            </div>
+                            <div class="circuit-description">${descriptions[circuit.name]}</div>
+                            ${circuit.iconic ? '<span class="iconic-badge">Iconic Track</span>' : ''}
+                        </div>
+                    `;
+                    circuitsGrid.appendChild(card);
+                });
+            }
+
+            document.querySelectorAll('.circuit-tab').forEach(tab => {
+                tab.addEventListener('click', function() {
+                    document.querySelectorAll('.circuit-tab').forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    renderCircuits(this.dataset.filter);
+                });
+            });
+
+            renderCircuits('current');
+        });
+    </script>
+</body>
+</html>

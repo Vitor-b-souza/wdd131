@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formula 1 2025 Team Cars Gallery - Visual Guide to All Constructor Vehicles">
+    <title>Formula 1 - Team Cars Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .teams-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .team-card {
+            background-color: var(--color-gray);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+
+        .team-card:hover {
+            border-color: var(--color-primary);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255, 24, 1, 0.3);
+        }
+
+        .team-car-image-container {
+            width: 100%;
+            height: 400px;
+            background-color: var(--color-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .team-car-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            display: block;
+            padding: 20px;
+        }
+
+        .team-content {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .team-name {
+            font-family: 'Poppins', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: 25px;
+        }
+
+        .team-drivers {
+            background-color: var(--color-dark);
+            border-radius: 4px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .driver-entry {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--color-gray);
+            font-size: 15px;
+        }
+
+        .driver-entry:last-child {
+            border-bottom: none;
+        }
+
+        .driver-name {
+            color: var(--color-light);
+            font-weight: 600;
+        }
+
+        .driver-number {
+            color: var(--color-primary);
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .car-specs {
+            border-top: 2px solid var(--color-primary);
+            padding-top: 20px;
+        }
+
+        .spec-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+
+        .spec-label {
+            color: var(--color-text);
+            font-weight: 600;
+        }
+
+        .spec-value {
+            color: var(--color-primary);
+            font-weight: 700;
+        }
+
+        .team-filter {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background-color: var(--color-gray);
+            color: var(--color-light);
+            border: 2px solid var(--color-gray);
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background-color: var(--color-primary);
+            border-color: var(--color-primary);
+            color: var(--color-dark);
+        }
+
+        @media (max-width: 1024px) {
+            .team-card {
+                grid-template-columns: 1fr;
+            }
+
+            .team-car-image-container {
+                height: 300px;
+            }
+
+            .team-content {
+                padding: 25px;
+            }
+
+            .team-name {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">F1</div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="drivers.html">Drivers</a></li>
+                    <li><a href="hall-of-fame.html">Hall of Fame</a></li>
+                    <li><a href="circuits.html">Circuits</a></li>
+                    <li><a href="regulations.html">Regulations</a></li>
+                    <li><a href="beginner.html">Beginner Guide</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>2025 Team Cars Gallery</h1>
+                <p>Official liveries of all Formula 1 constructors</p>
+            </div>
+        </section>
+
+        <section class="gallery-section">
+            <div class="container">
+                <h2>Formula 1 Teams</h2>
+                <div class="team-filter" id="teamFilter"></div>
+                <div class="teams-grid" id="teamsGrid"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About F1</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="drivers.html">Drivers</a></li>
+                        <li><a href="circuits.html">Circuits</a></li>
+                        <li><a href="regulations.html">Regulations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="references.html">References</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Formula 1 Championship. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const teams = [
+                { name: 'Red Bull Racing', carImage: 'https://media.formula1.com/image/upload/f_auto,q_auto/v1740000000/common/f1/2025/redbullracing/2025redbullracingcarright.webp', drivers: [{ name: 'Max Verstappen', number: 1 }, { name: 'Yuki Tsunoda', number: 22 }], powerUnit: 'Honda RBPT', constructorTitles: 6, driverTitles: 5 },
+                { name: 'McLaren Mercedes', carImage: 'https://media.formula1.com/image/upload/f_auto,q_auto/v1740000000/common/f1/2025/mclaren/2025mclarencarright.webp', drivers: [{ name: 'Lando Norris', number: 4 }, { name: 'Oscar Piastri', number: 81 }], powerUnit: 'Mercedes', constructorTitles: 10, driverTitles: 13 },
+                { name: 'Ferrari', carImage: 'https://media.formula1.com/image/upload/f_auto,q_auto/v1740000000/common/f1/2025/ferrari/2025ferraricarright.webp', drivers: [{ name: 'Charles Leclerc', number: 16 }, { name: 'Lewis Hamilton', number: 44 }], powerUnit: 'Ferrari', constructorTitles: 16, driverTitles: 15 },
+                { name: 'Mercedes', carImage: 'https://media.formula1.com/image/upload/f_auto,q_auto/v1740000000/common/f1/2025/mercedes/2025mercedescarright.webp', drivers: [{ name: 'George Russell', number: 63 }, { name: 'Kimi Antonelli', number: 12 }], powerUnit: 'Mercedes', constructorTitles: 8, driverTitles: 8 },
+                { name: 'Aston Martin', carImage: 'https://media.formula1.com/image/upload/f_auto,q_auto/v1740000000/common/f1/2025/astonmartin/2025astonmartincarright.webp', drivers: [{ name: 'Fernando Alonso', number: 14 }, { name: 'Lance Stroll', number: 18 }], powerUnit: 'Mercedes', constructorTitles: 0, driverTitles: 0 },
+                { name: 'Williams Racing', carImage: 'https://media.formula1.com/image/upload/f_auto,q_auto/v1740000000/common/f1/2025/williams/2025williamscarright.webp', drivers: [{ name: 'Alex Albon', number: 23 }, { name: 'Carlos Sainz', number: 55 }], powerUnit: 'Mercedes', constructorTitles: 9, driverTitles: 7 },
+                { name: 'Alpine F1 Team', carImage: 'https://media.formula1.com/image/upload/f_auto,q_auto/v1740000000/common/f1/2025/alpine/2025alpinecarright.webp', drivers: [{ name: 'Pierre Gasly', number: 10 }, { name: 'Franco Colapinto', number: 43 }], powerUnit: 'Renault', constructorTitles: 2, driverTitles: 3 },
+                { name: 'Kick Sauber', carImage: 'https://media.formula1.com/image/upload/f_auto,q_auto/v1740000000/common/f1/2025/kicksauber/2025kicksaubercarright.webp', drivers: [{ name: 'Nico Hulkenberg', number: 27 }, { name: 'Gabriel Bortoleto', number: 5 }], powerUnit: 'Ferrari', constructorTitles: 0, driverTitles: 0 },
+                { name: 'Racing Bulls', carImage: 'https://media.formula1.com/image/upload/f_auto,q_auto/v1740000000/common/f1/2025/racingbulls/2025racingbullscarright.webp', drivers: [{ name: 'Isack Hadjar', number: 6 }, { name: 'Liam Lawson', number: 30 }], powerUnit: 'Honda RBPT', constructorTitles: 0, driverTitles: 0 },
+                { name: 'Haas F1 Team', carImage: 'https://media.formula1.com/image/upload/f_auto,q_auto/v1740000000/common/f1/2025/haasf1team/2025haasf1teamcarright.webp', drivers: [{ name: 'Esteban Ocon', number: 31 }, { name: 'Oliver Bearman', number: 87 }], powerUnit: 'Ferrari', constructorTitles: 0, driverTitles: 0 }
+            ];
+
+            const teamsGrid = document.getElementById('teamsGrid');
+            const teamFilter = document.getElementById('teamFilter');
+
+            const allBtn = document.createElement('button');
+            allBtn.className = 'filter-btn active';
+            allBtn.textContent = 'All Teams';
+            allBtn.dataset.filter = 'all';
+            teamFilter.appendChild(allBtn);
+
+            function renderTeams(filter) {
+                teamsGrid.innerHTML = '';
+                const teamsToShow = filter === 'all' ? teams : teams.filter(t => t.name === filter);
+
+                teamsToShow.forEach(team => {
+                    const card = document.createElement('div');
+                    card.className = 'team-card';
+                    
+                    card.innerHTML = `
+                        <div class="team-car-image-container">
+                            <img src="${team.carImage}" alt="${team.name} Car 2025" class="team-car-image" loading="lazy">
+                        </div>
+                        <div class="team-content">
+                            <div class="team-name">${team.name}</div>
+                            <div class="team-drivers">
+                                ${team.drivers.map(driver => `
+                                    <div class="driver-entry">
+                                        <span class="driver-name">${driver.name}</span>
+                                        <span class="driver-number">#${driver.number}</span>
+                                    </div>
+                                `).join('')}
+                            </div>
+                            <div class="car-specs">
+                                <div class="spec-row">
+                                    <span class="spec-label">Power Unit</span>
+                                    <span class="spec-value">${team.powerUnit}</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Constructors' Titles</span>
+                                    <span class="spec-value">${team.constructorTitles}</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Drivers' Titles</span>
+                                    <span class="spec-value">${team.driverTitles}</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    teamsGrid.appendChild(card);
+                });
+            }
+
+            teamFilter.addEventListener('click', function(e) {
+                if (e.target.classList.contains('filter-btn')) {
+                    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                    e.target.classList.add('active');
+                    renderTeams(e.target.dataset.filter);
+                }
+            });
+
+            renderTeams('all');
+        });
+    </script>
+</body>
+</html>

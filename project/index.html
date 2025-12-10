@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formula 1 Official Website - Latest News, Drivers, Circuits, and Regulations">
+    <title>Formula 1 - Official Championship</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .news-grid-home {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .news-card {
+            background-color: var(--color-gray);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 24, 1, 0.3);
+        }
+
+        .news-card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        .news-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            color: var(--color-primary);
+            padding: 15px 15px 8px;
+        }
+
+        .news-card p {
+            padding: 0 15px 15px;
+            color: var(--color-text);
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">F1</div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="drivers.html">Drivers</a></li>
+                    <li><a href="hall-of-fame.html">Hall of Fame</a></li>
+                    <li><a href="circuits.html">Circuits</a></li>
+                    <li><a href="regulations.html">Regulations</a></li>
+                    <li><a href="beginner.html">Beginner Guide</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Formula 1 Championship</h1>
+                <p>The pinnacle of motorsport racing</p>
+            </div>
+        </section>
+
+        <section class="news-section">
+            <div class="container">
+                <h2>Latest News</h2>
+                <div class="news-grid-home">
+                    <div class="news-card">
+                        <img src="https://media.formula1.com/image/upload/f_auto,c_thumb,q_auto/v1740000000/fom-website/static-assets/2025/races/card/abu-dhabi.webp" alt="Abu Dhabi 2025" class="news-card-image" loading="lazy">
+                        <h3>2025 Season Finale</h3>
+                        <p>Lando Norris claims his maiden World Drivers' Championship at Abu Dhabi. McLaren dominates constructors' title.</p>
+                    </div>
+                    <div class="news-card">
+                        <img src="https://cdn.acritica.net/img/pc/920/600/dn_arquivo/2025/05/fnjblqqkazbxhfb57zunsuecd4.jpg" alt="Lewis Hamilton Ferrari" class="news-card-image" loading="lazy">
+                        <h3>Lewis Hamilton's Ferrari Journey Begins</h3>
+                        <p>Seven-time World Champion officially joins Ferrari, ending 12 years with Mercedes. Historic 2025 season begins.</p>
+                    </div>
+                    <div class="news-card">
+                        <img src="https://media.formula1.com/image/upload/f_auto,c_thumb,q_auto/v1740000000/fom-website/static-assets/2025/races/card/qatar.webp" alt="2025 Regulations" class="news-card-image" loading="lazy">
+                        <h3>2025 Technical Regulations</h3>
+                        <p>New flexi-wing restrictions, mandatory cooling systems, and technical improvements reshape competitive landscape.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-drivers">
+            <div class="container">
+                <h2>Featured Drivers 2025</h2>
+                <div class="drivers-carousel" id="driverCarousel">
+                    <div class="driver-card">
+                        <h3>Max Verstappen</h3>
+                        <p>Red Bull Racing</p>
+                        <span>4x World Champion</span>
+                    </div>
+                    <div class="driver-card">
+                        <h3>Lando Norris</h3>
+                        <p>McLaren Mercedes</p>
+                        <span>2025 World Champion</span>
+                    </div>
+                    <div class="driver-card">
+                        <h3>Charles Leclerc</h3>
+                        <p>Ferrari</p>
+                        <span>Ferrari Development Driver</span>
+                    </div>
+                    <div class="driver-card">
+                        <h3>Lewis Hamilton</h3>
+                        <p>Ferrari</p>
+                        <span>7x World Champion</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Explore Formula 1</h2>
+                <div class="cta-grid">
+                    <a href="drivers.html" class="cta-card">
+                        <h3>Current Drivers</h3>
+                        <p>Meet the 20 drivers competing in 2025</p>
+                    </a>
+                    <a href="hall-of-fame.html" class="cta-card">
+                        <h3>Hall of Fame</h3>
+                        <p>Legendary drivers of Formula 1 history</p>
+                    </a>
+                    <a href="circuits.html" class="cta-card">
+                        <h3>Circuits</h3>
+                        <p>24 iconic racing venues worldwide</p>
+                    </a>
+                    <a href="regulations.html" class="cta-card">
+                        <h3>Regulations</h3>
+                        <p>Technical and sporting rules explained</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <h2>Stay Updated</h2>
+                <form class="contact-form" id="contactForm">
+                    <fieldset>
+                        <legend>Subscribe to Updates</legend>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="interest">Interest</label>
+                            <select id="interest" name="interest">
+                                <option value="">Select an interest</option>
+                                <option value="news">Latest News</option>
+                                <option value="races">Race Updates</option>
+                                <option value="drivers">Driver News</option>
+                                <option value="all">Everything</option>
+                            </select>
+                        </div>
+                        <button type="submit">Subscribe</button>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About F1</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="drivers.html">Drivers</a></li>
+                        <li><a href="circuits.html">Circuits</a></li>
+                        <li><a href="regulations.html">Regulations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="references.html">References</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Formula 1 Championship. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

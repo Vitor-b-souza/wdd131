@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formula 1 Hall of Fame - Greatest Drivers in History">
+    <title>Formula 1 - Hall of Fame</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .legend-card {
+            background-color: var(--color-gray);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border-left: 5px solid var(--color-primary);
+            margin-bottom: 25px;
+        }
+
+        .legend-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 8px 25px rgba(255, 24, 1, 0.3);
+        }
+
+        .legend-header {
+            background: linear-gradient(90deg, var(--color-primary) 0%, rgba(255, 24, 1, 0.7) 100%);
+            padding: 25px;
+            display: flex;
+            gap: 25px;
+            align-items: flex-start;
+        }
+
+        .legend-image-container {
+            width: 150px;
+            height: 150px;
+            border-radius: 8px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .legend-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            display: block;
+        }
+
+        .legend-title-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex: 1;
+        }
+
+        .legend-title {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .legend-name {
+            font-family: 'Poppins', sans-serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--color-light);
+            margin-bottom: 5px;
+        }
+
+        .legend-era {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .legend-badges {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .badge {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: var(--color-light);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .legend-content {
+            padding: 25px;
+        }
+
+        .legend-stat {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--color-dark);
+        }
+
+        .legend-stat:last-child {
+            border-bottom: none;
+        }
+
+        .stat-label {
+            color: var(--color-text);
+            font-weight: 600;
+        }
+
+        .stat-value {
+            color: var(--color-primary);
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .legend-description {
+            margin-top: 20px;
+            color: var(--color-text);
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        .category {
+            margin-bottom: 50px;
+        }
+
+        .category h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 28px;
+            color: var(--color-primary);
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--color-primary);
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">F1</div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="drivers.html">Drivers</a></li>
+                    <li><a href="hall-of-fame.html">Hall of Fame</a></li>
+                    <li><a href="circuits.html">Circuits</a></li>
+                    <li><a href="regulations.html">Regulations</a></li>
+                    <li><a href="beginner.html">Beginner Guide</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Hall of Fame</h1>
+                <p>Legendary drivers who defined Formula 1</p>
+            </div>
+        </section>
+
+        <section class="hall-of-fame">
+            <div class="container">
+                <div class="category">
+                    <h3>Seven-Time World Champions</h3>
+                    <div class="legend-card">
+                        <div class="legend-header">
+                            <div class="legend-image-container">
+                                <img src="https://a.espncdn.com/combiner/i?img=/i/headshots/rpm/players/full/868.png&w=350&h=254" alt="Lewis Hamilton" class="legend-image" loading="lazy">
+                            </div>
+                            <div class="legend-title-section">
+                                <div class="legend-title">
+                                    <div class="legend-name">Lewis Hamilton</div>
+                                    <div class="legend-era">British | 2007-2024</div>
+                                </div>
+                                <div class="legend-badges">
+                                    <span class="badge">7x Champion</span>
+                                    <span class="badge">103 Wins</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="legend-content">
+                            <div class="legend-stat">
+                                <span class="stat-label">World Championships</span>
+                                <span class="stat-value">7</span>
+                            </div>
+                            <div class="legend-stat">
+                                <span class="stat-label">Career Wins</span>
+                                <span class="stat-value">103</span>
+                            </div>
+                            <div class="legend-stat">
+                                <span class="stat-label">Pole Positions</span>
+                                <span class="stat-value">103</span>
+                            </div>
+                            <div class="legend-stat">
+                                <span class="stat-label">Fastest Laps</span>
+                                <span class="stat-value">52</span>
+                            </div>
+                            <div class="legend-description">Lewis Hamilton holds the record for most career wins and pole positions in Formula 1 history. His seven world championships tie him with Michael Schumacher for the most titles ever. A dominant force throughout his career with Mercedes and Ferrari.</div>
+                        </div>
+                    </div>
+
+                    <div class="legend-card">
+                        <div class="legend-header">
+                            <div class="legend-image-container">
+                                <img src="https://www.pngplay.com/wp-content/uploads/13/Michael-Schumacher-Background-PNG-Image.png" alt="Michael Schumacher" class="legend-image" loading="lazy">
+                            </div>
+                            <div class="legend-title-section">
+                                <div class="legend-title">
+                                    <div class="legend-name">Michael Schumacher</div>
+                                    <div class="legend-era">German | 1991-2006</div>
+                                </div>
+                                <div class="legend-badges">
+                                    <span class="badge">7x Champion</span>
+                                    <span class="badge">91 Wins</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="legend-content">
+                            <div class="legend-stat">
+                                <span class="stat-label">World Championships</span>
+                                <span class="stat-value">7</span>
+                            </div>
+                            <div class="legend-stat">
+                                <span class="stat-label">Career Wins</span>
+                                <span class="stat-value">91</span>
+                            </div>
+                            <div class="legend-stat">
+                                <span class="stat-label">Pole Positions</span>
+                                <span class="stat-value">68</span>
+                            </div>
+                            <div class="legend-stat">
+                                <span class="stat-label">Fastest Laps</span>
+                                <span class="stat-value">41</span>
+                            </div>
+                            <div class="legend-description">Michael Schumacher dominated Formula 1 with Ferrari, winning five consecutive world championships from 2000-2004. His precision, consistency, and fitness redefined what it meant to be an elite F1 competitor. One of the greatest drivers of all time.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h3>Four-Time World Champions</h3>
+                                        <div class="legend-card">
+                        <div class="legend-header">
+                            <div class="legend-image-container">
+                                <img src="https://media.formula1.com/image/upload/f_auto,c_thumb,q_auto/v1740000000/common/f1/2025/redbullracing/maxver01/2025redbullracingmaxver01right.webp" alt="Max Verstappen" class="legend-image" loading="lazy">
+                            </div>
+                            <div class="legend-title-section">
+                                <div class="legend-title">
+                                    <div class="legend-name">Max Verstappen</div>
+                                    <div class="legend-era">Dutch | 2015-Present</div>
+                                </div>
+                                <div class="legend-badges">
+                                    <span class="badge">4x Champion</span>
+                                    <span class="badge">63 Wins</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="legend-content">
+                            <div class="legend-stat">
+                                <span class="stat-label">World Championships</span>
+                                <span class="stat-value">4</span>
+                            </div>
+                            <div class="legend-stat">
+                                <span class="stat-label">Career Wins</span>
+                                <span class="stat-value">63</span>
+                            </div>
+                            <div class="legend-stat">
+                                <span class="stat-label">Pole Positions</span>
+                                <span class="stat-value">37</span>
+                            </div>
+                            <div class="legend-description">Max Verstappen emerged as one of F1's most dominant forces, winning four consecutive World Championships. His aggressive driving style and incredible racecraft have cemented him as one of the greatest drivers of his generation.</div>
+                        </div>
+                    </div>
+                    <div class="legend-card">
+                        <div class="legend-header">
+                            <div class="legend-image-container">
+                                <img src="https://www.chorege.com/wp-content/uploads/2016/11/prost.png" alt="Alain Prost" class="legend-image" loading="lazy">
+                            </div>
+                            <div class="legend-title-section">
+                                <div class="legend-title">
+                                    <div class="legend-name">Alain Prost</div>
+                                    <div class="legend-era">French | 1980-1993</div>
+                                </div>
+                                <div class="legend-badges">
+                                    <span class="badge">4x Champion</span>
+                                    <span class="badge">51 Wins</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="legend-content">
+                            <div class="legend-stat">
+                                <span class="stat-label">World Championships</span>
+                                <span class="stat-value">4</span>
+                            </div>
+                            <div class="legend-stat">
+                                <span class="stat-label">Career Wins</span>
+                                <span class="stat-value">51</span>
+                            </div>
+                            <div class="legend-stat">
+                                <span class="stat-label">Pole Positions</span>
+                                <span class="stat-value">33</span>
+                            </div>
+                            <div class="legend-description">Nicknamed "The Professor" for his calculated and intelligent driving style, Alain Prost dominated the 1980s with fierce rivalries with Ayrton Senna. His consistency and precision made him one of the greatest tacticians in Formula 1 history.</div>
+                        </div>
+                    </div>
+
+                    <div class="legend-card">
+                        <div class="legend-header">
+                            <div class="legend-image-container">
+                                <img src="https://e2.365dm.com/f1/drivers/256x256/h_full_812.png" alt="Sebastian Vettel" class="legend-image" loading="lazy">
+                            </div>
+                            <div class="legend-title-section">
+                                <div class="legend-title">
+                                    <div class="legend-name">Sebastian Vettel</div>
+                                    <div class="legend-era">German | 2007-2022</div>
+                                </div>
+                                <div class="legend-badges">
+                                    <span class="badge">4x Champion</span>
+                                    <span class="badge">53 Wins</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="legend-content">
+                            <div class="legend-stat">
+                                <span class="stat-label">World Championships</span>
+                                <span class="stat-value">4</span>
+                            </div>
+                            <div class="legend-stat">
+                                <span class="stat-label">Career Wins</span>
+                                <span class="stat-value">53</span>
+                            </div>
+                            <div class="legend-stat">
+                                <span class="stat-label">Pole Positions</span>
+                                <span class="stat-value">57</span>
+                            </div>
+                            <div class="legend-description">Sebastian Vettel won four consecutive World Championships with Red Bull from 2010-2013, showcasing his aggressive racecraft and focus. His dominance with 9 consecutive wins in 2013 remains one of F1's most impressive achievements.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h3>Three-Time World Champions</h3>
+                    <div class="legend-card">
+                        <div class="legend-header">
+                            <div class="legend-image-container">
+                                <img src="https://static.wixstatic.com/media/0217a7_83ce795feeaa42ba8deff7c2189d43f8~mv2.png/v1/fill/w_468,h_626,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/SENNA.png" alt="Ayrton Senna" class="legend-image" loading="lazy">
+                            </div>
+                            <div class="legend-title-section">
+                                <div class="legend-title">
+                                    <div class="legend-name">Ayrton Senna</div>
+                                    <div class="legend-era">Brazilian | 1984-1994</div>
+                                </div>
+                                <div class="legend-badges">
+                                    <span class="badge">3x Champion</span>
+                                    <span class="badge">41 Wins</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="legend-content">
+                            <div class="legend-stat">
+                                <span class="stat-label">World Championships</span>
+                                <span class="stat-value">3</span>
+                            </div>
+                            <div class="legend-stat">
+                                <span class="stat-label">Career Wins</span>
+                                <span class="stat-value">41</span>
+                            </div>
+                            <div class="legend-stat">
+                                <span class="stat-label">Pole Positions</span>
+                                <span class="stat-value">65</span>
+                            </div>
+                            <div class="legend-description">One of motorsport's most legendary figures, Ayrton Senna remains the benchmark for raw talent and charisma. His legendary wet-weather performances and incredible qualifying pace made him a fearless competitor. His tragic death at the 1994 San Marino Grand Prix deeply affected the sport.</div>
+                        </div>
+                    </div>
+
+                    <div class="legend-card">
+                        <div class="legend-header">
+                            <div class="legend-image-container">
+                                <img src="https://pbs.twimg.com/media/F2ZWS39WUAAYhYK.png" alt="Niki Lauda" class="legend-image" loading="lazy">
+                            </div>
+                            <div class="legend-title-section">
+                                <div class="legend-title">
+                                    <div class="legend-name">Niki Lauda</div>
+                                    <div class="legend-era">Austrian | 1972-1985</div>
+                                </div>
+                                <div class="legend-badges">
+                                    <span class="badge">3x Champion</span>
+                                    <span class="badge">25 Wins</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="legend-content">
+                            <div class="legend-stat">
+                                <span class="stat-label">World Championships</span>
+                                <span class="stat-value">3</span>
+                            </div>
+                            <div class="legend-stat">
+                                <span class="stat-label">Career Wins</span>
+                                <span class="stat-value">25</span>
+                            </div>
+                            <div class="legend-stat">
+                                <span class="stat-label">Pole Positions</span>
+                                <span class="stat-value">24</span>
+                            </div>
+                            <div class="legend-description">Niki Lauda's remarkable comeback from a life-threatening crash at the Nurburgring to win his second championship in 1977 remains one of F1's greatest stories. His third championship in 1984 and later business acumen cemented his legendary status.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h3>Two-Time World Champions</h3>
+                    <div class="legend-card">
+                        <div class="legend-header">
+                            <div class="legend-image-container">
+                                <img src="https://media.formula1.com/image/upload/f_auto,c_thumb,q_auto/v1740000000/common/f1/2025/astonmartin/feralo01/2025astonmartinferalo01right.webp" alt="Fernando Alonso" class="legend-image" loading="lazy">
+                            </div>
+                            <div class="legend-title-section">
+                                <div class="legend-title">
+                                    <div class="legend-name">Fernando Alonso</div>
+                                    <div class="legend-era">Spanish | 2003-Present</div>
+                                </div>
+                                <div class="legend-badges">
+                                    <span class="badge">2x Champion</span>
+                                    <span class="badge">32 Wins</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="legend-content">
+                            <div class="legend-stat">
+                                <span class="stat-label">World Championships</span>
+                                <span class="stat-value">2</span>
+                            </div>
+                            <div class="legend-stat">
+                                <span class="stat-label">Career Wins</span>
+                                <span class="stat-value">32</span>
+                            </div>
+                            <div class="legend-stat">
+                                <span class="stat-label">Pole Positions</span>
+                                <span class="stat-value">32</span>
+                            </div>
+                            <div class="legend-description">Fernando Alonso broke Michael Schumacher's dominance by winning back-to-back championships in 2005-2006 at age 25. He remains one of the most naturally gifted drivers in F1 history, known for his exceptional racecraft and defensive driving abilities.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h3>Other Legends</h3>
+
+
+                    <div class="legend-card">
+                        <div class="legend-header">
+                            <div class="legend-image-container">
+                                <img src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/6712/production/_102368362_juanmanuelfangio.jpg.webp" alt="Juan Manuel Fangio" class="legend-image" loading="lazy">
+                            </div>
+                            <div class="legend-title-section">
+                                <div class="legend-title">
+                                    <div class="legend-name">Juan Manuel Fangio</div>
+                                    <div class="legend-era">Argentine | 1950-1958</div>
+                                </div>
+                                <div class="legend-badges">
+                                    <span class="badge">5x Champion</span>
+                                    <span class="badge">24 Wins</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="legend-content">
+                            <div class="legend-stat">
+                                <span class="stat-label">World Championships</span>
+                                <span class="stat-value">5</span>
+                            </div>
+                            <div class="legend-stat">
+                                <span class="stat-label">Career Wins</span>
+                                <span class="stat-value">24</span>
+                            </div>
+                            <div class="legend-stat">
+                                <span class="stat-label">Pole Positions</span>
+                                <span class="stat-value">29</span>
+                            </div>
+                            <div class="legend-description">Juan Manuel Fangio's ability to adapt to different teams and cars throughout his career was extraordinary. His five world championships were considered an untouchable record for decades, and he remains a motorsport legend.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About F1</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="drivers.html">Drivers</a></li>
+                        <li><a href="circuits.html">Circuits</a></li>
+                        <li><a href="regulations.html">Regulations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="references.html">References</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Formula 1 Championship. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

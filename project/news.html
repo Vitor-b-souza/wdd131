@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formula 1 Latest News - Race Updates and Championship Coverage">
+    <title>Formula 1 - Latest News</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .news-article {
+            background-color: var(--color-gray);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 30px;
+        }
+
+        .news-article:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 24, 1, 0.3);
+        }
+
+        .news-image-container {
+            width: 100%;
+            height: 320px;
+            background-color: var(--color-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .news-article img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        .news-article h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 22px;
+            color: var(--color-primary);
+            padding: 20px 20px 5px;
+        }
+
+        .news-article .date {
+            padding: 0 20px;
+            font-size: 12px;
+            color: var(--color-text);
+            font-style: italic;
+        }
+
+        .news-article p {
+            padding: 10px 20px 20px;
+            color: var(--color-text);
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">F1</div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="drivers.html">Drivers</a></li>
+                    <li><a href="hall-of-fame.html">Hall of Fame</a></li>
+                    <li><a href="circuits.html">Circuits</a></li>
+                    <li><a href="regulations.html">Regulations</a></li>
+                    <li><a href="beginner.html">Beginner Guide</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Formula 1 News</h1>
+                <p>Latest updates from the world of racing</p>
+            </div>
+        </section>
+
+        <section class="news-section">
+            <div class="container">
+                <h2>Latest Stories</h2>
+                <div class="news-grid">
+                    <article class="news-article">
+                        <div class="news-image-container">
+                            <img src="https://media.formula1.com/image/upload/f_auto,c_thumb,q_auto/v1740000000/fom-website/static-assets/2025/races/card/abu-dhabi.webp" alt="Abu Dhabi Grand Prix 2025" loading="lazy">
+                        </div>
+                        <h3>Abu Dhabi Grand Prix 2025 Concludes Season</h3>
+                        <p class="date">December 7, 2025</p>
+                        <p>The 2025 Formula 1 season culminates at Yas Marina Circuit with Lando Norris securing his maiden World Drivers' Championship. McLaren celebrates their consecutive constructors' championship, marking their dominance throughout the season.</p>
+                    </article>
+
+                    <article class="news-article">
+                        <div class="news-image-container">
+                            <img src="https://media.formula1.com/image/upload/f_auto,c_thumb,q_auto/v1740000000/fom-website/static-assets/2025/races/card/qatar.webp" alt="Qatar Sprint Race" loading="lazy">
+                        </div>
+                        <h3>Qatar Sprint Race Highlights Championship Battle</h3>
+                        <p class="date">November 28, 2025</p>
+                        <p>The penultimate F1 Sprint race at Lusail International Circuit provides crucial points as the championship battle intensifies. Lando Norris maintains his advantage over Max Verstappen as the fight for the World Drivers' Championship reaches its climax.</p>
+                    </article>
+
+                    <article class="news-article">
+                        <div class="news-image-container">
+                            <img src="https://media.formula1.com/image/upload/f_auto,c_thumb,q_auto/v1740000000/fom-website/static-assets/2025/races/card/brazil.webp" alt="Sao Paulo Grand Prix" loading="lazy">
+                        </div>
+                        <h3>Sao Paulo Grand Prix - Interlagos Delivers Drama</h3>
+                        <p class="date">November 7, 2025</p>
+                        <p>The iconic Interlagos circuit hosts the Sao Paulo Grand Prix where McLaren continues to demonstrate championship-winning form. Lando Norris extends his points lead, setting the stage for an exciting conclusion to the 2025 season.</p>
+                    </article>
+
+                    <article class="news-article">
+                        <div class="news-image-container">
+                            <img src="https://media.formula1.com/image/upload/f_auto,c_thumb,q_auto/v1740000000/fom-website/static-assets/2025/races/card/mexico.webp" alt="Mexico City Grand Prix" loading="lazy">
+                        </div>
+                        <h3>Mexico City Grand Prix - High Altitude Challenge</h3>
+                        <p class="date">October 24, 2025</p>
+                        <p>The Mexico City Grand Prix at Autodromo Hermanos Rodriguez presents unique challenges due to its 2,200-meter altitude. McLaren's Lando Norris continues to dominate the championship standings with impressive performances.</p>
+                    </article>
+
+                    <article class="news-article">
+                        <div class="news-image-container">
+                            <img src="https://media.formula1.com/image/upload/f_auto,c_thumb,q_auto/v1740000000/fom-website/static-assets/2025/races/card/united-states.webp" alt="United States Grand Prix" loading="lazy">
+                        </div>
+                        <h3>United States Grand Prix - Austin Action</h3>
+                        <p class="date">October 17, 2025</p>
+                        <p>Circuit of the Americas hosts an exciting battle for championship points. Max Verstappen demonstrates his characteristic aggressive racing to secure victory, keeping the title fight competitive as the season heads toward its conclusion.</p>
+                    </article>
+
+                    <article class="news-article">
+                        <div class="news-image-container">
+                            <img src="https://media.formula1.com/image/upload/f_auto,c_thumb,q_auto/v1740000000/fom-website/static-assets/2025/races/card/singapore.webp" alt="Singapore Grand Prix" loading="lazy">
+                        </div>
+                        <h3>Singapore Grand Prix - Night Race Excitement</h3>
+                        <p class="date">October 3, 2025</p>
+                        <p>The Marina Bay Street Circuit's iconic night race provides spectacular racing under lights. Mercedes' George Russell claims victory in the challenging street circuit conditions, showcasing exceptional racecraft at Singapore's demanding layout.</p>
+                    </article>
+
+                    <article class="news-article">
+                        <div class="news-image-container">
+                            <img src="https://media.formula1.com/image/upload/f_auto,c_thumb,q_auto/v1740000000/fom-website/static-assets/2025/races/card/azerbaijan.webp" alt="Azerbaijan Grand Prix" loading="lazy">
+                        </div>
+                        <h3>Azerbaijan Grand Prix - City Winds Challenge</h3>
+                        <p class="date">September 19, 2025</p>
+                        <p>The Baku City Circuit's frequent winds challenge all competitors. The high-speed street circuit produces thrilling action as teams battle for crucial championship points on the streets of Azerbaijan.</p>
+                    </article>
+
+                    <article class="news-article">
+                        <div class="news-image-container">
+                            <img src="https://gulfbusiness.com/wp-content/uploads/2025/12/Photo-courtesy-WAM-Lando-Norris-is-crowned-F1-2025-World-Champion-at-the-Abu-Dhabi-Grand-Prix.jpg" alt="Lando Norris World Champion" loading="lazy">
+                        </div>
+                        <h3>Lando Norris Crowned 2025 F1 World Champion</h3>
+                        <p class="date">December 8, 2025</p>
+                        <p>Lando Norris secures his maiden World Drivers' Championship with a third-place finish at the Abu Dhabi Grand Prix finale. The McLaren driver claimed the crown by just two points over Max Verstappen, cementing his position among Formula 1's elite after a thrilling season-long battle against his rivals.</p>
+                    </article>
+
+                    <article class="news-article">
+                        <div class="news-image-container">
+                            <img src="https://media.formula1.com/image/upload/f_auto,c_thumb,q_auto/v1740000000/fom-website/static-assets/2025/races/card/great-britain.webp" alt="British Grand Prix" loading="lazy">
+                        </div>
+                        <h3>British Grand Prix - Silverstone Celebrates 80 Years</h3>
+                        <p class="date">July 2, 2025</p>
+                        <p>Silverstone Circuit celebrates 80 years of racing heritage, hosting the iconic British Grand Prix. The circuit's long straights and sweeping corners showcase the evolution of Formula 1 racing at this historic venue.</p>
+                    </article>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About F1</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="drivers.html">Drivers</a></li>
+                        <li><a href="circuits.html">Circuits</a></li>
+                        <li><a href="regulations.html">Regulations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="references.html">References</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Formula 1 Championship. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

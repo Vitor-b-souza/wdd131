@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formula 1 Beginner Guide - Learn the Basics of Racing">
+    <title>Formula 1 - Beginner Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .guide-section {
+            background-color: var(--color-gray);
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid var(--color-primary);
+        }
+
+        .guide-section h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 26px;
+            color: var(--color-primary);
+            margin-bottom: 20px;
+        }
+
+        .guide-content {
+            color: var(--color-text);
+            line-height: 1.8;
+        }
+
+        .guide-content p {
+            margin-bottom: 15px;
+        }
+
+        .guide-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .guide-content li {
+            padding: 12px 0 12px 30px;
+            position: relative;
+            border-bottom: 1px solid var(--color-dark);
+        }
+
+        .guide-content li:before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: var(--color-primary);
+            font-weight: bold;
+        }
+
+        .guide-content li:last-child {
+            border-bottom: none;
+        }
+
+        .highlight {
+            background-color: var(--color-dark);
+            padding: 20px;
+            border-left: 3px solid var(--color-primary);
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+
+        .points-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: var(--color-dark);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .points-table th,
+        .points-table td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid var(--color-gray);
+        }
+
+        .points-table th {
+            background-color: var(--color-primary);
+            color: var(--color-dark);
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .points-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .points-table td {
+            color: var(--color-light);
+        }
+
+        .tire-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .tire-card {
+            background-color: var(--color-dark);
+            padding: 20px;
+            border-radius: 4px;
+            border-left: 4px solid var(--color-primary);
+            text-align: center;
+        }
+
+        .tire-name {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--color-light);
+        }
+
+        .tire-description {
+            font-size: 13px;
+            color: var(--color-text);
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">F1</div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="drivers.html">Drivers</a></li>
+                    <li><a href="hall-of-fame.html">Hall of Fame</a></li>
+                    <li><a href="circuits.html">Circuits</a></li>
+                    <li><a href="regulations.html">Regulations</a></li>
+                    <li><a href="beginner.html">Beginner Guide</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Formula 1 Beginner Guide</h1>
+                <p>Everything you need to know to start enjoying F1</p>
+            </div>
+        </section>
+
+        <section class="guide-main">
+            <div class="container">
+                <div class="guide-section">
+                    <h3>What is Formula 1?</h3>
+                    <div class="guide-content">
+                        <p>Formula 1 is the pinnacle of motorsport racing, featuring the world's most talented drivers competing in technologically advanced racing cars at speeds exceeding 300 km/h. The sport has been captivating global audiences since its first official World Championship race in 1950.</p>
+                        <p>Each season consists of multiple Grands Prix held at different venues worldwide, where drivers accumulate points toward the World Drivers' Championship and their teams compete for the Constructors' Championship.</p>
+                    </div>
+                </div>
+
+                <div class="guide-section">
+                    <h3>The Grand Prix Weekend</h3>
+                    <div class="guide-content">
+                        <p>A typical Formula 1 Grand Prix weekend includes several sessions spread over three days:</p>
+                        <ul>
+                            <li><strong>Free Practice 1 & 2 (Friday):</strong> Teams gather data on track conditions and test different setups and strategies. Rookies often get limited running time.</li>
+                            <li><strong>Free Practice 3 (Saturday Morning):</strong> Final preparation before qualifying, with focus on race simulations.</li>
+                            <li><strong>Qualifying (Saturday Afternoon):</strong> Single-lap sprint to determine the starting grid positions. Divided into Q1, Q2, and Q3 sessions.</li>
+                            <li><strong>Race (Sunday):</strong> The main event where drivers compete for points, typically running between 1.5 to 2 hours at most circuits.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="guide-section">
+                    <h3>Points System</h3>
+                    <div class="guide-content">
+                        <p>Drivers earn points based on their finishing position in each race. The current points system (2025) allocates points only to the top 10 finishers:</p>
+                        <table class="points-table">
+                            <thead>
+                                <tr>
+                                    <th>Position</th>
+                                    <th>1st</th>
+                                    <th>2nd</th>
+                                    <th>3rd</th>
+                                    <th>4th</th>
+                                    <th>5th</th>
+                                    <th>6th</th>
+                                    <th>7th</th>
+                                    <th>8th</th>
+                                    <th>9th</th>
+                                    <th>10th</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Points</strong></td>
+                                    <td>25</td>
+                                    <td>18</td>
+                                    <td>15</td>
+                                    <td>12</td>
+                                    <td>10</td>
+                                    <td>8</td>
+                                    <td>6</td>
+                                    <td>4</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p style="margin-top: 20px;"><strong>Important:</strong> The fastest lap point has been removed as of 2025. Previously, drivers finishing in the top 10 could earn an extra point for the race's fastest lap, but this is no longer awarded.</p>
+                    </div>
+                </div>
+
+                <div class="guide-section">
+                    <h3>Tire Strategy</h3>
+                    <div class="guide-content">
+                        <p>Tire selection and pit stop strategy play crucial roles in Formula 1 success. Teams must use at least two different tire compounds during a race, requiring at least one pit stop for most races.</p>
+                        <p>The three main tire compounds used in dry conditions are:</p>
+                        <div class="tire-types">
+                            <div class="tire-card">
+                                <div class="tire-name" style="color: #DC0000;">Soft</div>
+                                <div class="tire-description">Soft tires provide maximum grip and are fastest but wear out quickly.</div>
+                            </div>
+                            <div class="tire-card">
+                                <div class="tire-name" style="color: #FFCC00;">Medium</div>
+                                <div class="tire-description">Medium tires offer a balance between grip and durability.</div>
+                            </div>
+                            <div class="tire-card">
+                                <div class="tire-name" style="color: #FFFFFF;">Hard</div>
+                                <div class="tire-description">Hard tires are most durable but provide less grip than softer compounds.</div>
+                            </div>
+                        </div>
+                        <p style="margin-top: 20px;">Each tire set is limited to 25 laps across the entire weekend, encouraging diverse strategies among teams.</p>
+                    </div>
+                </div>
+
+                <div class="guide-section">
+                    <h3>DRS - Drag Reduction System</h3>
+                    <div class="guide-content">
+                        <p>The Drag Reduction System is an adjustable rear wing element that reduces aerodynamic drag, allowing faster top speeds in designated zones on the circuit. This system is designed to facilitate overtaking.</p>
+                        <ul>
+                            <li><strong>Activation:</strong> DRS can only be used when a driver is within one second of the car ahead in designated DRS zones.</li>
+                            <li><strong>Purpose:</strong> Enables drivers trailing by small margins to achieve higher speeds and attempt overtakes.</li>
+                            <li><strong>Positions:</strong> DRS has only two positions (closed and open) as of 2025, eliminating intermediate deflection states.</li>
+                            <li><strong>Race Start:</strong> DRS is disabled for the first two laps after the race start.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="guide-section">
+                    <h3>Common Penalties and Flags</h3>
+                    <div class="guide-content">
+                        <p>Race stewards enforce regulations through various penalties and signals to maintain safety and fair competition:</p>
+                        <ul>
+                            <li><strong>Grid Penalties:</strong> Drivers may lose grid positions for technical violations or unsafe driving in previous races.</li>
+                            <li><strong>Time Penalties:</strong> Added to a driver's race time for rule violations during the race.</li>
+                            <li><strong>Yellow Flags:</strong> Signal danger ahead; drivers must reduce speed and not overtake.</li>
+                            <li><strong>Red Flags:</strong> Indicate serious danger; the race is stopped and restarted after repairs.</li>
+                            <li><strong>Safety Car:</strong> Deployed during incidents to neutralize the race until hazards are cleared.</li>
+                            <li><strong>Virtual Safety Car:</strong> Electronic pace control without a physical safety car vehicle on track.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="guide-section">
+                    <h3>Teams and Constructors Championship</h3>
+                    <div class="guide-content">
+                        <p>Formula 1 features two championships:</p>
+                        <div class="highlight">
+                            <strong style="color: var(--color-primary); font-size: 18px;">Drivers' Championship:</strong> Individual drivers compete for the World Drivers' Championship, with points based on finishing positions.
+                        </div>
+                        <div class="highlight">
+                            <strong style="color: var(--color-primary); font-size: 18px;">Constructors' Championship:</strong> Teams compete for the Constructors' Championship. Points from both drivers are combined for the team's total.
+                        </div>
+                        <p style="margin-top: 20px;">In 2025, there are 10 teams, each fielding two drivers. The McLaren team dominated the season with Lando Norris and Oscar Piastri securing both championships.</p>
+                    </div>
+                </div>
+
+                <div class="guide-section">
+                    <h3>Key Terminology</h3>
+                    <div class="guide-content">
+                        <ul>
+                            <li><strong>Pole Position:</strong> The first starting position on the grid, earned by the fastest qualifying lap.</li>
+                            <li><strong>Podium:</strong> The top three finishing positions (1st, 2nd, 3rd).</li>
+                            <li><strong>Pit Stop:</strong> When a car enters the pit lane to change tires, refuel (if applicable), or make repairs.</li>
+                            <li><strong>Overtake:</strong> When a driver passes another car to gain a higher position.</li>
+                            <li><strong>Qualifying:</strong> Saturday session determining grid order using single-lap pace in three rounds (Q1, Q2, Q3).</li>
+                            <li><strong>Formation Lap:</strong> The parade lap before the race where drivers warm up tires and get into position.</li>
+                            <li><strong>DNF (Did Not Finish):</strong> When a driver retires from the race before completion.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="guide-section">
+                    <h3>Tips for Enjoying F1</h3>
+                    <div class="guide-content">
+                        <ul>
+                            <li>Start by watching a full race from start to finish to understand the flow and drama.</li>
+                            <li>Learn about the different teams and drivers to develop favorites you can root for.</li>
+                            <li>Pay attention to tire strategy - it's often more important than raw speed.</li>
+                            <li>Understand your local circuit's characteristics and history to appreciate unique racing challenges.</li>
+                            <li>Follow team radio communications to hear real-time tactical decisions and driver emotions.</li>
+                            <li>Check weather forecasts before races, as conditions can dramatically alter the competition.</li>
+                            <li>Watch previous seasons to understand rivalries and team dynamics.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About F1</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="drivers.html">Drivers</a></li>
+                        <li><a href="circuits.html">Circuits</a></li>
+                        <li><a href="regulations.html">Regulations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="references.html">References</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Formula 1 Championship. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

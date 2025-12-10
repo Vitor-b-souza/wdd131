@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formula 1 Technical and Sporting Regulations 2025">
+    <title>Formula 1 - Regulations 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .regulation-section {
+            background-color: var(--color-gray);
+            border-radius: 8px;
+            margin-bottom: 30px;
+            overflow: hidden;
+            border-left: 5px solid var(--color-primary);
+        }
+
+        .regulation-header {
+            background: linear-gradient(90deg, var(--color-primary) 0%, rgba(255, 24, 1, 0.7) 100%);
+            padding: 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+
+        .regulation-header:hover {
+            background: linear-gradient(90deg, var(--color-primary) 0%, rgba(255, 24, 1, 0.8) 100%);
+        }
+
+        .regulation-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--color-light);
+        }
+
+        .toggle-icon {
+            font-size: 24px;
+            transition: transform 0.3s ease;
+        }
+
+        .toggle-icon.open {
+            transform: rotate(180deg);
+        }
+
+        .regulation-content {
+            padding: 25px;
+            display: none;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .regulation-content.open {
+            display: block;
+            max-height: 2000px;
+        }
+
+        .regulation-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .regulation-content li {
+            color: var(--color-text);
+            padding: 12px 0;
+            border-bottom: 1px solid var(--color-dark);
+            line-height: 1.6;
+        }
+
+        .regulation-content li:last-child {
+            border-bottom: none;
+        }
+
+        .regulation-content li strong {
+            color: var(--color-primary);
+        }
+
+        .change-badge {
+            display: inline-block;
+            background-color: var(--color-primary);
+            color: var(--color-dark);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 700;
+            margin-left: 10px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">F1</div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="drivers.html">Drivers</a></li>
+                    <li><a href="hall-of-fame.html">Hall of Fame</a></li>
+                    <li><a href="circuits.html">Circuits</a></li>
+                    <li><a href="regulations.html">Regulations</a></li>
+                    <li><a href="beginner.html">Beginner Guide</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Formula 1 Regulations 2025</h1>
+                <p>Technical and sporting rules for the 2025 season</p>
+            </div>
+        </section>
+
+        <section class="regulations-section">
+            <div class="container">
+                <h2>Technical Regulations</h2>
+
+                <div class="regulation-section">
+                    <div class="regulation-header">
+                        <span class="regulation-title">Flexi-Wing Restrictions <span class="change-badge">New</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="regulation-content">
+                        <ul>
+                            <li><strong>DRS Deployment Modes:</strong> The rear wing must only have two positions (closed and open), eliminating the "mini-DRS" concept used by teams.</li>
+                            <li><strong>Rear Wing Deflection:</strong> The mainplane cannot flex more than 6mm under load, while the upper flap cannot move more than 7mm when load is applied horizontally.</li>
+                            <li><strong>Slot Gap Control:</strong> The gap between the mainplane and rear-wing flap is restricted to strict measurements, reducing variable deflection during the race.</li>
+                            <li><strong>Front Wing Deflection:</strong> Additional front wing tests reduce deflection from 10mm to 5mm under specified load conditions.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="regulation-section">
+                    <div class="regulation-header">
+                        <span class="regulation-title">Driver Cooling Systems <span class="change-badge">New</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="regulation-content">
+                        <ul>
+                            <li><strong>Mandatory in Extreme Heat:</strong> When FIA predicts ambient temperatures over 30.5°C, teams must fit driver cooling systems.</li>
+                            <li><strong>System Components:</strong> Includes a fireproof cooling vest with 48m of piping containing cooling liquid, pump, plumbing, and thermal storage.</li>
+                            <li><strong>Weight Allowance:</strong> Cars gain an additional 5kg weight allowance when cooling systems are mandated.</li>
+                            <li><strong>Coolant Specifications:</strong> Coolant must be air, water, or aqueous solution of sodium chloride, potassium chloride, or propylene glycol.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="regulation-section">
+                    <div class="regulation-header">
+                        <span class="regulation-title">Minimum Weight and Driver Allowance <span class="change-badge">Updated</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="regulation-content">
+                        <ul>
+                            <li><strong>Car Minimum Weight:</strong> The overall minimum weight limit (excluding fuel) increased from 798kg to 800kg.</li>
+                            <li><strong>Driver Weight Allowance:</strong> The minimum driver weight allowance increased from 80kg to 82kg to support taller drivers.</li>
+                            <li><strong>Car Plus Driver Total:</strong> The combined minimum weight of car and driver is now 800kg.</li>
+                            <li><strong>Heat Hazard Mass Increase:</strong> An additional 5kg is allowed when cooling systems are mandated due to heat conditions.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="regulation-section">
+                    <div class="regulation-header">
+                        <span class="regulation-title">Gearbox Unlimited <span class="change-badge">Removed</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="regulation-content">
+                        <ul>
+                            <li><strong>No Gearbox Limit:</strong> There is no longer a limit on the number of gearboxes used by teams during the season.</li>
+                            <li><strong>Reliability Achievement:</strong> Modern gearbox designs have proven sufficiently reliable, eliminating the need for usage restrictions.</li>
+                            <li><strong>Grid Penalty Exemption:</strong> Exceeding gearbox quotas no longer results in grid penalties.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2 style="margin-top: 50px;">Sporting Regulations</h2>
+
+                <div class="regulation-section">
+                    <div class="regulation-header">
+                        <span class="regulation-title">Fastest Lap Point Removed <span class="change-badge">Changed</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="regulation-content">
+                        <ul>
+                            <li><strong>Point Elimination:</strong> The one-point bonus for fastest lap (awarded to drivers finishing in top 10) has been completely removed.</li>
+                            <li><strong>Reason for Change:</strong> Teams were making controversial late-race pit stops for fresh tires to secure the point, sometimes taking drivers out of points contention.</li>
+                            <li><strong>Impact:</strong> Maximum points available from a Grand Prix reduced from 26 to 25 for the winner.</li>
+                            <li><strong>Historical Note:</strong> Fastest lap points were originally part of F1 from 1950-1959 before being reintroduced in 2019.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="regulation-section">
+                    <div class="regulation-header">
+                        <span class="regulation-title">Tire Usage and Strategy <span class="change-badge">Updated</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="regulation-content">
+                        <ul>
+                            <li><strong>Tire Lap Limit:</strong> Each set of tires is limited to 25 laps total across the entire race weekend (can be split across sessions).</li>
+                            <li><strong>Two-Stop Minimum:</strong> At Monaco, all drivers must make a minimum of two pit stops to use different tire compounds.</li>
+                            <li><strong>Three Compound Requirement:</strong> Teams must use at least three sets of tires in races, with minimum two different compounds for dry races.</li>
+                            <li><strong>Wet Weather Exception:</strong> In fully wet conditions, drivers may use only full wet tires per FIA mandate.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="regulation-section">
+                    <div class="regulation-header">
+                        <span class="regulation-title">Safety Car Tire Rules <span class="change-badge">New</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="regulation-content">
+                        <ul>
+                            <li><strong>Optional Full Wets:</strong> Teams are no longer forced to fit full wet tyres for wet safety car starts; they may choose intermediate tyres.</li>
+                            <li><strong>FIA Override Authority:</strong> The FIA retains flexibility to mandate full wet tyres if deemed necessary for safety.</li>
+                            <li><strong>Weather Assessment:</strong> Teams can now make tactical decisions based on track conditions at safety car starts.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="regulation-section">
+                    <div class="regulation-header">
+                        <span class="regulation-title">Qualifying in Poor Visibility <span class="change-badge">New</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="regulation-content">
+                        <ul>
+                            <li><strong>Weather-Based Grid:</strong> If qualifying cannot be held due to poor visibility, the grid is set by championship classification.</li>
+                            <li><strong>First Race Exception:</strong> At the season opener, stewards have discretion to determine the grid order if championship classification cannot be used.</li>
+                            <li><strong>Sprint Format:</strong> Same rules apply if a Sprint Qualifying session cannot take place.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="regulation-section">
+                    <div class="regulation-header">
+                        <span class="regulation-title">Pit Lane Start Procedures <span class="change-badge">Updated</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="regulation-content">
+                        <ul>
+                            <li><strong>Ordered Departure:</strong> Once all cars have passed pit exit, pit lane starters must depart in prescribed order.</li>
+                            <li><strong>Formation Lap Requirement:</strong> Pit lane starters must re-enter the pit lane at the end of the formation lap before the race proper begins.</li>
+                            <li><strong>Consistent Procedure:</strong> This establishes more predictable and consistent pre-race procedures.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="regulation-section">
+                    <div class="regulation-header">
+                        <span class="regulation-title">Rookie Testing Opportunities <span class="change-badge">Expanded</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="regulation-content">
+                        <ul>
+                            <li><strong>Doubled FP1 Sessions:</strong> Mandatory FP1 session time for rookies has doubled from one to two sessions per car.</li>
+                            <li><strong>Team Allocation:</strong> With two cars per team, this provides four occasions per team to run a rookie driver.</li>
+                            <li><strong>Rookie Definition:</strong> A rookie is defined as a driver who has completed not more than two Grands Prix.</li>
+                            <li><strong>Driver Development:</strong> The expansion supports better preparation for young drivers entering their first F1 season.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About F1</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="drivers.html">Drivers</a></li>
+                        <li><a href="circuits.html">Circuits</a></li>
+                        <li><a href="regulations.html">Regulations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="references.html">References</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Formula 1 Championship. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const headers = document.querySelectorAll('.regulation-header');
+
+            headers.forEach(header => {
+                header.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('.toggle-icon');
+
+                    content.classList.toggle('open');
+                    icon.classList.toggle('open');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
